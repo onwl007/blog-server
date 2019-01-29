@@ -1,0 +1,45 @@
+{
+  "env": {
+    "node": true,
+    "es6": true,
+    "mongo": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 8
+  },
+  "rules": {
+    "eqeqeq": [
+      "error",
+      "always"
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+    }],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+    }],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "none"
+      }
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ]
+  }
+}
