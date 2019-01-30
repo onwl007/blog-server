@@ -6,6 +6,7 @@ const bodyparser = require('koa-bodyparser');
 const logger = require('koa-logger');
 const router = require('./routes');
 const { mongo, redis } = require('./plugins');
+const middlewares = require('./middleware');
 
 // error handler
 onerror(app);
@@ -16,6 +17,7 @@ app.use(bodyparser({
 }));
 app.use(json());
 app.use(logger());
+app.use(middlewares.response);
 
 // logger
 app.use(async (ctx, next) => {
