@@ -3,7 +3,7 @@
     "name": "blog-server",
     "port": 3000,
     "url": "http://localhost:3000",
-    "end": "dev"
+    "env": "dev"
   },
   "mongo": {
     "uri": "mongodb://127.0.0.1/blog-server-dev",
