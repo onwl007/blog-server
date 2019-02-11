@@ -15,7 +15,9 @@ mongoose.Promise = global.Promise;
 exports.connect = () => {
   mongoose.connect(mongo.uri, mongo.options).then(() => {
     debug('连接成功');
+    console.log('Mongo is ready now!');
   }, err => {
     debug('连接失败: ', mongo.uri, err.message);
+    console.error('Mongo startup failed ' + err);
   });
 };
